@@ -297,32 +297,43 @@ h2 {
     text-decoration: underline;
 }
 /* Add this at the end of your CSS */
+/* Styles for mobile devices */
 
-/* CSS for proper spacing and animation */
+/* Define viewport meta tag */
+
+
+/* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .portfoliosect .portfolio-content {
-        grid-template-columns: repeat(2, 1fr); /* Adjust grid to 2 columns on smaller screens */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; /* Reduce gap between portfolio items */
     }
     .portfoliosect .portfolio {
-        padding-right: 0; /* Remove right padding */
-        margin-bottom: calc(var(--portfolio-space) / 2); /* Reduce bottom margin */
+        padding-right: 0;
+        margin-bottom: calc(var(--portfolio-space) / 2);
     }
-    .portfoliosect .portfolio-text {
-        margin-left: 0; /* Remove left margin */
-        margin-top: calc(var(--portfolio-space) / 2); /* Reduce top margin */
+    .portfoliosect .portfolio-tabs ul {
+        gap: 10px; /* Reduce gap between tabs */
     }
     .portfoliosect .portfolio-image {
-        width: 100%; /* Adjust image width to full width */
-        position: relative; /* Reset position */
-        margin-bottom: 15px; /* Add space between image and text */
+        width: 100%;
+        position: static; /* Remove absolute positioning */
+    }
+    .portfoliosect .portfolio-text {
+        margin-left: 0;
+        margin-top: 15px; /* Adjust top margin */
     }
     .portfoliosect .portfolio-text .portfolio-text-wrapper {
-        padding: 10px; /* Adjust padding */
-        min-height: auto; /* Remove minimum height */
+        padding: 10px;
+    }
+    .projectButton::before {
+        width: 130%; /* Adjust width for smaller screens */
+        transform: rotate(-8deg) translateY(-15px); /* Adjust rotation and translation */
+        left: -120%; /* Adjust left position */
     }
 }
-
 /* Other styles remain unchanged */
+
 
 
 section#contact {
