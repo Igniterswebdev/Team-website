@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: blue;
+    background-color:black;
     color:rgb(42, 165, 77);
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
@@ -261,7 +261,7 @@ body {
 }
 
 h2 {
-    color: #009f6b;
+    color: #333;
     margin-bottom: 20px;
 }
 
