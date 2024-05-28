@@ -130,41 +130,130 @@ body {
         background-position: 100% 0;
     }
 }
-.Projects {
-    /* CSS for background styling */
-body {
-    background-color: #f0f0f0; /* Set a light gray background color for the whole page */
-    font-family: Arial, sans-serif; /* Use Arial font family for text */
-    padding: 20px; /* Add some padding to the body */
-}
 
-h2 {
-    color:#007bff;/* Set heading color to dark gray */
-}
-
-ul {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding */
-}
-
-li {
-    background-color: #fff; /* Set background color for list items */
-    border-radius: 5px; /* Add border radius for a slightly rounded appearance */
-    padding: 15px; /* Add padding to each list item */
-    margin-bottom: 10px; /* Add some space between list items */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
-}
-
-a {
-    color: #007bff; /* Set link color to blue */
-    text-decoration: none; /* Remove default underline */
-}
-
-a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-}
+/* portfolioSectionEnd */
+:root {
+    --portfolio-space: 70px;
+  }
+  .portfoliosect .portfolio-content {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .portfoliosect .portfolio {
+    position: relative;
+    padding-right: var(--portfolio-space);
+    margin-bottom: var(--portfolio-space);
+  }
+  .portfoliosect .portfolio-tabs ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .portfoliosect .portfolio-tabs ul li {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .portfoliosect .portfolio-tabs ul li.active {
+    color: var(--color);
+    text-decoration: underline;
+  }
+  .portfoliosect .portfolio-image {
+    width: calc(100% - var(--portfolio-space));
+    height: 100%;
+    position: absolute;
+  }
+  .portfoliosect .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+  }
+  .portfoliosect .portfolio-text {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    margin-left: var(--portfolio-space);
+    margin-top: var(--portfolio-space);
+    height: 100%;
+    display: flex;
+  }
+  .portfoliosect .portfolio-text .portfolio-text-wrapper {
+    background-color: #040510;
+    margin: unset;
+    margin-top: auto;
+    padding: 16px;
+    width: 100%;
+    min-height: 200px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  .portfoliosect .portfolio-text .portfolio-text-wrapper h2 {
+    font-weight: 600;
+    font-family: Raleway;
+    letter-spacing: 2px;
+  }
+  .portfoliosect .portfolio-text .portfolio-text-wrapper h5 {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .portfoliosect .portfolio-text .portfolio-text-wrapper .button {
+    margin-top: auto;
+  }
+  .projectButton {
+    font-size: 14px;
+    opacity: 0.8;
+    font-family: poppins;
+    font-weight: 400;
+    padding: 5px 10px;
+    background: transparent;
+    color: var(--color);
+    transition: all 0.4s ease;
+    outline: none;
+    border: 2px solid var(--color);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    display: inline-block;
+  }
+  .portfolio-text a {
+    display: inline-block;
+    height: 50px;
+    margin: 20px 0 0;
+  }
+  .projectButton::before {
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 200%;
+    transform: rotate(-8deg) translateY(-20px);
+    top: 0%;
+    left: -118%;
+    z-index: 3;
+    background: var(--color);
+    transition: all 0.7s ease;
+  }
+  .projectButton .index {
+    z-index: 6;
+    position: relative;
+    font-weight: 600;
+  }
+  .projectButton:hover {
+    color: #000;
+  }
+  .projectButton:hover.projectButton::before {
+    left: 0%;
+  }
+  /* portfolioSectionEnd */
+  
 /* CSS for proper spacing and animation */
 body {
     font-family: Arial, sans-serif;
@@ -186,7 +275,7 @@ h2 {
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(235, 230, 230, 0.1);
     animation: fade-in 0.5s ease-out; /* Adding animation */
 }
 
@@ -207,8 +296,9 @@ h2 {
 .project-list li a:hover {
     text-decoration: underline;
 }
+
 section#contact {
-    background-color: rgba(5, 16, 1, 0.5); /* Increase transparency */
+    background-color: rgba(9, 18, 6, 0.5); /* Increase transparency */
     background-image: url(pro.png);
     display: flex;
     justify-content: center; /* Align content horizontally */
@@ -425,3 +515,4 @@ section#contact p {
         right: -12px;
     }
 }
+
