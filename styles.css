@@ -554,4 +554,39 @@ section#contact p {
         right: -12px;
     }
 }
+/* footer starts */
+
+footer{ 
+
+    text-align: center;
+
+    background: rgb(33, 37, 41);
+
+    padding: 17px 24px;
+
+    color: #FFFFFFBF;
+
+    font-size: 20px;
+
+}
+
+footer  .name{
+
+    color: #ed6681;
+
+    cursor: pointer;
+
+}
+
+footer .year{
+
+    color: #f1abb9;
+
+}
+
+footer i{
+
+    color: #fff;
+
+}
 
