@@ -253,6 +253,33 @@ body {
   .projectButton:hover.projectButton::before {
     left: 0%;
   }
+  /* Media Queries for Mobile Phones */
+@media (max-width: 480px) {
+    .portfoliosect .portfolio-content {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted grid layout for smaller screens */
+    }
+    .portfoliosect .portfolio-tabs ul li {
+      font-size: 10px; /* Further reduced font size for smaller screens */
+    }
+    .portfoliosect .portfolio-text .portfolio-text-wrapper {
+      padding: 8px; /* Further reduced padding for smaller screens */
+      min-height: 120px; /* Further reduced minimum height for smaller screens */
+    }
+    .portfoliosect .portfolio-text .portfolio-text-wrapper h2 {
+      font-size: 14px; /* Increased font size for smaller screens */
+      margin-bottom: 3px; /* Adjusted margin bottom for smaller screens */
+    }
+    .portfoliosect .portfolio-text .portfolio-text-wrapper h5 {
+      font-size: 10px; /* Increased font size for smaller screens */
+      margin-top: 3px; /* Adjusted margin top for smaller screens */
+    }
+    .portfolio-text a {
+      margin-top: 5px; /* Adjusted margin top for smaller screens */
+    }
+    .projectButton::before {
+      transform: rotate(-8deg) translateY(-5px); /* Adjusted rotation and translation for smaller screens */
+    }
+  }
   /* portfolioSectionEnd */
   
 /* CSS for proper spacing and animation */
