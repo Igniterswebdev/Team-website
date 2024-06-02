@@ -131,6 +131,7 @@ body {
     }
 }
 
+
 /* portfolioSectionEnd */
 :root {
     --portfolio-space: 70px;
@@ -296,13 +297,7 @@ h2 {
 .project-list li a:hover {
     text-decoration: underline;
 }
-/* Add this at the end of your CSS */
-/* Styles for mobile devices */
-
 /* Define viewport meta tag */
-
-
-/* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .portfoliosect .portfolio-content {
         grid-template-columns: repeat(2, 1fr);
@@ -332,7 +327,24 @@ h2 {
         left: -120%; /* Adjust left position */
     }
 }
-/* Other styles remain unchanged */
+
+@media screen and (max-width: 480px) {
+    .portfoliosect .portfolio-content {
+        grid-template-columns: 1fr;
+        gap: 10px; /* Further reduce gap between portfolio items */
+    }
+    .portfoliosect .portfolio-tabs ul {
+        gap: 5px; /* Further reduce gap between tabs */
+    }
+    .portfoliosect .portfolio-text .portfolio-text-wrapper {
+        padding: 8px;
+    }
+    .projectButton::before {
+        width: 150%; /* Further adjust width for smaller screens */
+        transform: rotate(-8deg) translateY(-10px); /* Further adjust rotation and translation */
+        left: -130%; /* Further adjust left position */
+    }
+}
 
 
 
@@ -676,4 +688,75 @@ footer i{
     color: #fff;
 
 }
+/* About Us Section */
+#about-us {
+    background: #fff;
+    padding: 60px 20px;
+    margin: 80px auto;
+    max-width: 2000px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+}
 
+#about-us h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#about-us p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Button Style */
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    #about-us {
+        padding: 40px 20px;
+        margin: 20px;
+    }
+}
