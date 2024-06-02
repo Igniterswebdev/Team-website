@@ -632,6 +632,14 @@ section#contact p {
             transform: translateY(-50%) rotate(180deg);
             opacity: 0.5;
         }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .certificate-scroll img {
+        width: 80%; /* Adjust the width of each certificate image for mobile */
+        margin-right: 20px; /* Adjust the spacing between certificate images for mobile */
+    }
+}
+
 
 /* footer starts */
 
