@@ -376,21 +376,21 @@ h2 {
 
 
 section#contact {
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center; /* Align content horizontally */
-    align-items: center; /* Align content vertically */
-    background-color: black;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 50px 0; /* Reduce padding */
+  background-color: white; /* White background */
+  padding: 20px; /* Padding around the form */
+  width: 300px; /* Width of the form */
+  margin: auto; /* Center the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section#contact .container {
-    max-width: 600px; /* Reduce container width */
-    margin: 0 auto; /* Center the container */
+  background-color: white; /* White background */
+  padding: 20px; /* Padding around the form */
+  width: 300px; /* Width of the form */
+  margin: auto; /* Center the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section#contact .section-heading {
@@ -438,11 +438,11 @@ section#contact p {
 }
 
 /* Media query for responsiveness */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     section#contact .container {
         padding: 0 15px;
     }
-}
+}*/
 .row{
     text-decoration-color: #fff;
 }
@@ -450,11 +450,12 @@ section#contact p {
 #contactForm input[type="email"],
 #contactForm input[type="tel"],
 #contactForm textarea {
-    background-color: rgba(0, 0, 0, 0.5); /* Increase transparency */
-    border: 2px solid #fff; /* Add border to increase visibility */
+    width: 100%;
+    border: 1px solid #ccc; /* Add border to increase visibility */
     color: #fff; /* Text color */
-    padding: 15px; /* Padding */
-    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    margin: 6px 0;
+    border-radius: 4px;
 }
 
 #contactForm input[type="text"]:focus,
