@@ -426,8 +426,8 @@ section#contact {
 }
 
 section#contact .container {
-    background: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
-    padding: 40px; /* Increased padding around the form */
+    background: rgba(232, 221, 221, 0.273); /* Dark background with transparency */
+    padding: 80px; /* Increased padding around the form */
     width: 400px; /* Increased width of the form */
     margin: auto; /* Center the form */
     border-radius: 8px; /* Rounded corners */
@@ -442,11 +442,12 @@ section#contact label {
 
 section#contact input,
 section#contact textarea {
-    width: 100%;
+    width:50%;
     padding: 10px;
     margin-bottom: 10px;
+    margin-right: 60px;
     border: 1px solid #555; /* Darker border for better contrast */
-    border-radius: 4px;
+    border-radius: 2px;
     background: #333; /* Darker background for input fields */
     color: #fff; /* White text for input fields */
 }
