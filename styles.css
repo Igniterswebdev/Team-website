@@ -418,20 +418,21 @@ section {
 
 /* Contact Form Styles */
 section#contact {
-    background: url('thumb-1920-1026345.jpg') no-repeat center center; /* Add your background image URL here */
+    background: url('thumb-1920-1026345.jpg') no-repeat center center;
     background-size: cover; /* Ensure the background covers the entire section */
-    padding: 20px; /* Padding around the form */
+    padding: 40px; /* Increased padding around the form */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section#contact .container {
-    background: rgba(255, 255, 255, 0.8); /* White background with transparency */
-    padding: 20px; /* Padding around the form */
-    width: 300px; /* Width of the form */
+    background: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    padding: 40px; /* Increased padding around the form */
+    width: 400px; /* Increased width of the form */
     margin: auto; /* Center the form */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Text color to white for contrast */
 }
 
 section#contact label {
@@ -444,8 +445,10 @@ section#contact textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #555; /* Darker border for better contrast */
     border-radius: 4px;
+    background: #333; /* Darker background for input fields */
+    color: #fff; /* White text for input fields */
 }
 
 section#contact input[type="submit"] {
