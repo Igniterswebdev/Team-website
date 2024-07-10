@@ -418,7 +418,7 @@ section {
 
 /* Contact Form Styles */
 section#contact {
-    background: img('thumb-1920-1026345.jpg') no-repeat center center; /* Add your background image URL here */
+    background: url('thumb-1920-1026345.jpg') no-repeat center center; /* Add your background image URL here */
     background-size: cover; /* Ensure the background covers the entire section */
     padding: 20px; /* Padding around the form */
     border-radius: 8px; /* Rounded corners */
