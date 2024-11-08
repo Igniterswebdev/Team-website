@@ -787,3 +787,24 @@ footer i{
         margin: 20px;
     }
 }
+/* CSS */
+.blink {
+    animation: blink-animation 3.5s steps(5, start) infinite;
+    color: #000; /* Set desired text color */
+    text-decoration: none;
+}
+
+a { 
+    text-decoration: none; /* Ensures the link has no underline */
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0;
+    }
+}
+/* CSS */
+.role {
+    color: #00008B; /* Dark blue color */
+}
+
