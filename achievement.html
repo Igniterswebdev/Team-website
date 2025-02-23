@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | IGNITERS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+        }
+        section {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .achievement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            opacity: 0;
+            animation: slide-in 1s ease-in-out forwards;
+        }
+        .achievement:nth-child(odd) {
+            animation: slide-in-left 1s ease-in-out forwards;
+        }
+        .achievement:nth-child(even) {
+            animation: slide-in-right 1s ease-in-out forwards;
+        }
+        .achievement-image img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .achievement-details h3 {
+            margin: 0 0 10px;
+            color: #222;
+        }
+        .achievement-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Animations */
+        @keyframes slide-in-left {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section id="achievements-awards">
+    <h2>Achievements and Awards</h2>
+    
+    <div class="achievement">
+        <div class="achievement-image">
+            <img src="1st.JPG" alt="Trophy Image">
+        </div>
+        <div class="achievement-details">
+            <h3>Our CEO Mr. Joebin J S and Team Triumph at SATWA Hackathon 2024</h3>
+            <p>Issued by Saintgits College of Engineering (Autonomous) · Feb 2024</p>
+            <p>Associated with ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
+            <p>Our CEO Mr. Joebin J S, along with his teammates Mr. Michael Arul Abel, Ms. Srinithi, and Ms. Elakkiya, triumphed at the SATWA Hackathon 2024. This prestigious victory is a testament to our creative problem-solving skills and technical expertise in a highly competitive environment, setting a benchmark for innovation within our community.The top prize in a national-level competition and dominated the event, winning first place and a cash prize of 75000</p>
+        </div>
+    </div>
+    <div class="achievement">
+        <div class="achievement-image">
+            <img src="1st team.jpg" alt="Trophy Image">
+        </div>
+        <div class="achievement-details">
+            <h3>Kudos to Our Champions at Code Fest 2025!</h3>
+            <p>Issued by Arunai engineering college College Tamil Nadu, India· Feb 2025</p>
+            <p>Associated with ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
+            <p>Kudos to Ms.Priyadarshini S , Webinar Co-ordinator & Event Manager; Ms.Subasri R , Event Anchor & Event Management Specialist, along with their teammates Mr. Sivaprakasm T and Mr. Shriram S, for emerging victorious at Code Fest 2024, securing the First Prize and a reward of ₹12,000.</p>
+        </div>
+    </div>
+    
+    <div class="achievement">
+        <div class="achievement-image">
+            <img src="3rd.jpeg" alt="Trophy Image">
+        </div>
+        <div class="achievement-details">
+            <h3>Secured 3rd Place in Datronix (Paper Presentation)</h3>
+            <p>Issued by Easwari Engineering College (SRM Group) · Feb 2024</p>
+            <p>Associated with ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
+            <p>We are proud to have secured the Third Prize in the paper presentation event at a national-level technical symposium hosted by SRM Easwari Engineering College. This achievement highlights our dedication to research, technical excellence, and our ability to communicate complex ideas effectively, further establishing our presence in the academic and tech communities.</p>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
