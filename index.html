@@ -3,319 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igniters - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.9);
-            border-bottom: 2px solid #ff9800;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo img {
-            height: 50px;
-        }
-
-        .igniters-heading {
-            font-size: 28px;
-            font-weight: 700;
-            color: #ff9800;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            margin-top: 10px;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 10px 15px;
-            transition: background 0.3s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: #ff9800;
-            border-radius: 5px;
-        }
-
-        /* Running Text in Header */
-        .running-text {
-            width: 100%;
-            background: #222;
-            color: #ff9800;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 14px;
-            white-space: nowrap;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-        .running-text span {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scrollText 10s linear infinite;
-        }
-
-        @keyframes scrollText {
-            from { transform: translateX(0%); }
-            to { transform: translateX(-100%); }
-        }
-
-        /* Introduction Section */
-        .introduction {
-            text-align: center;
-            padding: 50px 20px;
-            background: #1a1a1a;
-        }
-
-        .introduction h2 {
-            color: #ff9800;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        /* Carousel Section */
-        .carousel-container {
-            position: relative;
-            width: 80%;
-            margin: 50px auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 50%;
-            z-index: 10;
-        }
-
-        .prev { left: 10px; }
-        .next { right: 10px; }
-
-        /* Contact Section */
-        .contact {
-            text-align: center;
-            padding: 50px 20px;
-            background: #111;
-            border-top: 2px solid #ff9800;
-            margin-top: 50px;
-        }
-
-        .contact h2 {
-            color: #ff9800;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .contact-info {
-            text-align: left;
-            max-width: 400px;
-        }
-
-        .contact-info p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        .contact-info i {
-            color: #ff9800;
-            margin-right: 10px;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 300px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 14px;
-            background: #222;
-            color: white;
-        }
-
-        .contact-form button {
-            background: #ff9800;
-            color: black;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background: white;
-            color: black;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #222;
-            margin-top: 50px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .contact-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-info {
-                text-align: center;
-            }
-        }
-    </style>
+    <title>IGNITERS</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="team.png" alt="Igniters Logo">
-        </div>
-        <h1 class="igniters-heading">IGNITERS</h1>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="http://127.0.0.1:5500/upcoming-webinars.html">Upcoming Webinars</a></li>
-                <li><a href="http://127.0.0.1:5500/webinar.html">Webinars</a></li>
-                <li><a href="http://127.0.0.1:5500/team.html">Team</a></li>
-                <li><a href="http://127.0.0.1:5500/achievement.html">Achievements</a></li>
-                <li><a href="http://127.0.0.1:5500/project.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- Running Text -->
-        <div class="running-text">
-            <span>Igniters Founded in 2021 by Joebin J S, Karthikeyan K P, Kishore Kanna H, and Manisankar K. Igniters started as a college project collaboration. We've grown projects like honing skills in Embedded Systems, IoT, AI, and Cloud Computing.</span>
-        </div>
+    <header id="header">
+        <img src="team.png" alt="" height="150px" width="150px" left>
+        <h1 class="team-name">IGNITERS</h1>
     </header>
 
-    <!-- Introduction Section -->
-    <section class="introduction">
-        <h2>About Igniters</h2>
-        <p>Igniters was founded in 2021 by Joebin J S, Karthikeyan K P, Kishore Kanna H, and Manisankar K. What began as a simple college project collaboration has now evolved into a thriving community focused on innovation in <strong>Embedded Systems, IoT, AI, and Cloud Computing</strong>.</p>
-    </section>
-
-    <!-- Carousel Section -->
-    <section class="carousel-container">
-        <div class="carousel">
-            <img src="1722395756840.jpg" alt="Achievement 1">
-            <img src="1723219751976 (1).jpg" alt="Achievement 2">
-            <img src="1723219751976.jpg" alt="Achievement 3">
-            <img src="1723656664280.jpg" alt="Achievement 4">
-            <img src="1723820612900.jpg" alt="Achievement 5">
-            <img src="1728141312741.jpg" alt="Achievement 6">
-            <img src="1728830797278.jpg" alt="Achievement 7">
-            <img src="1728994540566.jpg" alt="Achievement 8">
-            <img src="1729175453237.jpg" alt="Achievement 9">
-            <img src="1729265364007.jpg" alt="Achievement 10">
+    <marquee onmouseover="this.stop()" onmouseout="this.start()">
+        Igniters Founded in 2021 by Joebin J S, Karthikeyan K P, Kishore Kanna H, and Manisankar K , Igniters started as a college project collaboration. We've grown projects like honing skills in Embedded Systems,IoT,AI and Cloud Computing. 
+        <a href="https://youtube.com/@igniters2k21?feature=shared">Igniters2k21</a>,
+        Youtube
+        <a href="https://www.linkedin.com/company/igniters2021">Igniters-Company</a> ,
+        Linkedin Page
+    </marquee>
+    <nav>
+        <a href="#about-us">About Us</a>
+        <a href="#vision">Vision and Mission</a>
+        <a href="achievement.html" target="_blank">Achievements</a>
+        <a href="upcoming-webinars.html" target="_blank">Upcoming Webinars</a>
+        <a href="webinar.html" target="_blank">Webinar</a>
+        <a href="speaker.html" target="_blank">Speaker Registration</a>
+        <a href="team.html" target="_blank">Associated Members</a>
+        <a href="project.html" target="_blank">Projects</a>
+        <a href="contact.html" target="_blank">Contact US</a>  
+    </nav>
+    <section id="about-us">
+      <h1>Welcome to Igniters</h1>
+      <p>Founded in 2021 by Joebin J S, Karthikeyan K P, Kishore Kanna H, and Manisankar K, Igniters began as a collaborative initiative to develop innovative projects for our college symposium. Our journey started with the creation of "Uncomplicated Clap Automation," which marked the beginning of our teamwork and shared vision.</p>
+      <p>Over the years, we’ve grown through continuous learning and innovation, developing numerous projects and honing our skills in engineering and technology. Our passion for advancing knowledge and staying at the forefront of technological trends has driven us forward.</p> 
+      <p>Today, Igniters has evolved into a platform that not only focuses on innovation but also empowers others through education. We now actively organize webinars aimed at fostering learning, sharing expertise, and connecting like-minded individuals who aspire to excel in their fields.<p>
+      <p>Igniters is committed to inspiring, educating, and shaping the future of engineering and technology through collaboration and innovation.<p>     
+   </section>
+    <section id="vision">
+        <h2>Vision and Mission</h2>
+        <div class="vision animated fadeIn">
+            <h3>Vision:</h3>
+            <p>"To emerge as pioneers in innovation and excellence, shaping the future through our fearless pursuit of greatness. We aspire to push boundaries, defy limitations, and leave an indelible mark on the world through our relentless dedication to transformative projects and achievements."</p>
         </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class = "contact">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> Email: igniters@example.com</p>
-                <p><i class="fas fa-phone"></i> Phone: +91 98765 43210</p>
-                <p><i class="fas fa-map-marker-alt"></i> Address: Chennai, India</p>
-            </div>
-            <form class="contact-form" action="https://formspree.io/f/xgegbbnl" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <div class="mission animated fadeIn">
+            <h3>Mission:</h3>
+            <p>"Our mission is to harness the boundless energy and creativity of our team, forged in the crucible of our college years, to embark on a journey of discovery and innovation. Through a diverse array of hardware projects, collaborative initiatives, and extracurricular activities, we aim to challenge conventions, break new ground, and inspire others to join us in our quest for greatness. We are driven by the belief that no challenge is too daunting, and no dream is too ambitious, as we strive to leave a lasting legacy of excellence and impact."</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Igniters. All rights reserved.</p>
-        <div>
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </footer>
 
-    <script>
-        let index = 0;
-        function moveSlide(step) {
-            const images = document.querySelectorAll('.carousel img');
-            index = (index + step + images.length) % images.length;
-            document.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
-        }
-        setInterval(() => moveSlide(1), 3000);
-    </script>
+      Created by <span class="name">IGNITERS</span> | <i class="copyright"></i> <span class="year">2021</span> All rights reserved.
 
+  </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>  
 </body>
 </html>
