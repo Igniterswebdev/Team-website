@@ -7,57 +7,80 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
             padding: 20px;
-            background-color: #f4f4f9;
+            background-color: #121212; /* Dark Background */
+            color: white;
             overflow-x: hidden;
         }
+
         section {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #1e1e1e;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
             position: relative;
         }
+
         h2 {
             text-align: center;
-            color: #333;
+            color: #ff9800; /* Golden Orange */
+            font-size: 28px;
         }
+
         .achievement {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid #333;
             padding: 15px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
+            border-radius: 10px;
+            background-color: #222;
             opacity: 0;
-            animation: slide-in 1s ease-in-out forwards;
+            animation: fadeIn 1s ease-in-out forwards;
+            transition: 0.3s;
         }
+
+        .achievement:hover {
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.7);
+        }
+
         .achievement:nth-child(odd) {
             animation: slide-in-left 1s ease-in-out forwards;
         }
+
         .achievement:nth-child(even) {
             animation: slide-in-right 1s ease-in-out forwards;
         }
+
         .achievement-image img {
             width: 150px;
             height: auto;
             margin-right: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
+            border: 2px solid #ff9800; /* Border for Images */
         }
+
         .achievement-details h3 {
             margin: 0 0 10px;
-            color: #222;
+            color: #ffcc66;
+            font-size: 20px;
         }
+
         .achievement-details p {
             margin: 5px 0;
-            color: #555;
+            color: #bbb;
+            font-size: 14px;
         }
 
         /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         @keyframes slide-in-left {
             from {
                 opacity: 0;
@@ -68,6 +91,7 @@
                 transform: translateX(0);
             }
         }
+
         @keyframes slide-in-right {
             from {
                 opacity: 0;
@@ -83,40 +107,41 @@
 <body>
 
 <section id="achievements-awards">
-    <h2>Achievements and Awards</h2>
+    <h2>🎉 Achievements and Awards 🏆</h2>
     
     <div class="achievement">
         <div class="achievement-image">
-            <img src="1st.JPG" alt="Trophy Image">
+            <img src="1st.JPG" alt="SATWA Hackathon 2024">
         </div>
         <div class="achievement-details">
             <h3>Our CEO Mr. Joebin J S and Team Triumph at SATWA Hackathon 2024</h3>
-            <p>Issued by Saintgits College of Engineering (Autonomous) · Feb 2024</p>
-            <p>Associated with ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
-            <p>Our CEO Mr. Joebin J S, along with his teammates Mr. Michael Arul Abel, Ms. Srinithi, and Ms. Elakkiya, triumphed at the SATWA Hackathon 2024. This prestigious victory is a testament to our creative problem-solving skills and technical expertise in a highly competitive environment, setting a benchmark for innovation within our community.The top prize in a national-level competition and dominated the event, winning first place and a cash prize of 75000</p>
+            <p><strong>Issued by:</strong> Saintgits College of Engineering · Feb 2024</p>
+            <p><strong>Associated with:</strong> ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
+            <p>Our CEO Mr. Joebin J S, along with his teammates Mr. Michael Arul Abel, Ms. Srinithi, and Ms. Elakkiya, triumphed at the SATWA Hackathon 2024. This victory is a testament to our problem-solving skills and technical expertise, securing **1st place** and a cash prize of **₹75,000**.</p>
         </div>
     </div>
+
     <div class="achievement">
         <div class="achievement-image">
-            <img src="1st team.jpg" alt="Trophy Image">
+            <img src="1st team.jpg" alt="Code Fest 2025">
         </div>
         <div class="achievement-details">
             <h3>Kudos to Our Champions at Code Fest 2025!</h3>
-            <p>Issued by Arunai engineering college College Tamil Nadu, India· Feb 2025</p>
-            <p>Associated with ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
-            <p>Kudos to Ms.Priyadarshini S , Webinar Co-ordinator & Event Manager; Ms.Subasri R , Event Anchor & Event Management Specialist, along with their teammates Mr. Sivaprakasm T and Mr. Shriram S, for emerging victorious at Code Fest 2024, securing the First Prize and a reward of ₹12,000.</p>
+            <p><strong>Issued by:</strong> Arunai Engineering College, Tamil Nadu · Feb 2025</p>
+            <p><strong>Associated with:</strong> ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
+            <p>Kudos to **Ms. Priyadarshini S, Ms. Subasri R, Mr. Sivaprakasm T, and Mr. Shriram S**, for securing **First Prize** at Code Fest 2025, along with a reward of **₹12,000**.</p>
         </div>
     </div>
-    
+
     <div class="achievement">
         <div class="achievement-image">
-            <img src="3rd.jpeg" alt="Trophy Image">
+            <img src="3rd.jpeg" alt="Datronix Paper Presentation">
         </div>
         <div class="achievement-details">
             <h3>Secured 3rd Place in Datronix (Paper Presentation)</h3>
-            <p>Issued by Easwari Engineering College (SRM Group) · Feb 2024</p>
-            <p>Associated with ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
-            <p>We are proud to have secured the Third Prize in the paper presentation event at a national-level technical symposium hosted by SRM Easwari Engineering College. This achievement highlights our dedication to research, technical excellence, and our ability to communicate complex ideas effectively, further establishing our presence in the academic and tech communities.</p>
+            <p><strong>Issued by:</strong> Easwari Engineering College (SRM Group) · Feb 2024</p>
+            <p><strong>Associated with:</strong> ST. JOSEPH'S INSTITUTE OF TECHNOLOGY, OMR</p>
+            <p>We are proud to have secured **Third Prize** in a national-level paper presentation event hosted by SRM Easwari Engineering College, highlighting our research excellence and technical expertise.</p>
         </div>
     </div>
 
