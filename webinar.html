@@ -3,199 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webinars</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    #certification {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to bottom, #111, #222);
-      position: relative;
-    }
-
-    .section-heading {
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #FFD700;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-    .carousel-container {
-      position: relative;
-      width: 90%;
-      max-width: 1200px;
-      overflow: hidden;
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 15px;
-      scroll-behavior: smooth;
-      white-space: nowrap;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .carousel-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Increased Image Size */
-    .carousel-track img {
-      height: 250px; /* Increased from 200px */
-      width: auto;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-    }
-
-    .carousel-track img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-    }
-
-    .scroll-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 215, 0, 0.8);
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 1.5rem;
-      border-radius: 50%;
-      color: black;
-      transition: 0.3s;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-    }
-
-    .scroll-btn:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    .scroll-left {
-      left: 20px;
-    }
-
-    .scroll-right {
-      right: 20px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .carousel-track img {
-        height: 180px; /* Adjusted for smaller screens */
-      }
-
-      .scroll-btn {
-        display: none;
-      }
-    }
-  </style>
+  <title>Projects</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file if needed -->
 </head>
 <body> 
-
-  <section id="certification">
-    <h2 class="section-heading">Webinars</h2>
-
-    <div class="carousel-container">
-      <button class="scroll-btn scroll-left" onclick="scrollLeft()">&#8249;</button>
-      <button class="scroll-btn scroll-right" onclick="scrollRight()">&#8250;</button>
-
-      <div class="carousel-track" id="webinar-carousel">
-        <img src="1.12.jpg" alt="webinar 1">
-        <img src="3-1.jpg" alt="webinar 2">
-        <img src="2.jpg" alt="webinar 3">
-        <img src="1-1.jpg" alt="webinar 4">
-        <img src="4.jpg" alt="webinar 5">
-        <img src="3.jpg" alt="webinar 6">
-        <img src="5.jpg" alt="webinar 7">
-        <img src="6.jpg" alt="webinar 8">
-        <img src="7.jpg" alt="webinar 9">
-        <img src="8.jpg" alt="webinar 10">
-        <img src="9.jpg" alt="webinar 11">
-        <img src="13.jpg" alt="webinar 12">
-        <img src="10.jpg" alt="webinar 13">
-        <img src="14.jpg" alt="webinar 14">
-        <img src="11.jpg" alt="webinar 15">
-        <img src="nov3.png" alt="webinar 16">
-        <img src="nov6.png" alt="webinar 17">
-        <img src="nov25.png" alt="webinar 18">
-        <img src="nov26.png" alt="webinar 19">
-        <img src="nov27.png" alt="webinar 20">
-        <img src="dec1.png" alt="webinar 21">
-        <img src="13dec.png" alt="webinar 22">
-        <img src="dec.png" alt="webinar 23">
-        <img src="dec20.jpg" alt="webinar 24">
-        <img src="dec23.png" alt="webinar 25">
-        <img src="28dec.png" alt="webinar 26">
-        <img src="jan4.png" alt="webinar 27">
-        <img src="jan9.jpg" alt="webinar 28">
-        <img src="jan10.jpg" alt="webinar 29">
-        <img src="jan24.jpg" alt="webinar 30">
-        <img src="jan31.png" alt="webinar 31">
-        <img src="feb2.jpg" alt="webinar 32">
-        <img src="feb8.jpg" alt="webinar 33">
-        <img src="feb15.jpg" alt="webinar 34">
-        <img src="feb21.jpg" alt="webinar 35">
-      </div>
-    </div>
-  </section>
-
-  <script>
-    const carousel = document.getElementById("webinar-carousel");
-    let autoScrollInterval;
-
-    function scrollLeft() {
-      carousel.scrollBy({ left: -carousel.clientWidth / 2, behavior: 'smooth' });
-      resetAutoScroll();
-    }
-
-    function scrollRight() {
-      carousel.scrollBy({ left: carousel.clientWidth / 2, behavior: 'smooth' });
-      resetAutoScroll();
-    }
-
-    function autoScroll() {
-      if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
-        carousel.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        carousel.scrollBy({ left: carousel.clientWidth / 2, behavior: 'smooth' });
-      }
-    }
-
-    function startAutoScroll() {
-      autoScrollInterval = setInterval(autoScroll, 3000);
-    }
-
-    function resetAutoScroll() {
-      clearInterval(autoScrollInterval);
-      startAutoScroll();
-    }
-
-    startAutoScroll();
-  </script>
-
-</body>
-</html>
+      <!-- webinar section -->
+      <section id="certification" style="background-color: #CAF0F8;">
+        <div class="section-content">
+          <h2 class="section-heading">Webinars</h2>
+          <div class="certificate-scroll">
+            <img src="1.12.jpg" alt="webinar 1">
+            <img src="3-1.jpg" alt="webinar 2">
+            <img src="2.jpg" alt="webinar 3">
+            <img src="1-1.jpg" alt="webinar 4">
+            <img src="4.jpg" alt="webinar 5">
+            <img src="3.jpg" alt="webinar 6">
+            <img src="5.jpg" alt="webinar 7">
+            <img src="6.jpg" alt="webinar 8">
+            <img src="7.jpg" alt="webinar 9">
+            <img src="8.jpg" alt="webinar 10">
+            <img src="9.jpg" alt="webinar 11">
+            <img src="13.jpg" alt="webinar 12">
+            <img src="10.jpg" alt="webinar 13">
+            <img src="14.jpg" alt="webinar 14">
+            <img src="11.jpg" alt="webinar 13">
+            <img src="nov3.png" alt="webinar 13">
+            <img src="nov6.png" alt="webinar 13">
+            <img src="nov 25.png" alt="webinar 13">
+            <img src="nov26.png" alt="webinar 13">
+            <img src="nov27.png" alt="webinar 13">
+            <img src="dec1.png" alt="webinar 13">
+            <img src="13dec.png" alt="webinar 13">
+            <img src="dec.png" alt="webinar 13">
+            <img src="dec20.jpg" alt="webinar 13">
+            <img src="dec23.png" alt="webinar 13">
+            <img src="28dec.png" alt="webinar 13">
+            <img src="jan 4.png" alt="webinar 13">
+            <img src="jan9.jpg" alt="webinar 13">
+            <img src="jan10.jpg" alt="webinar 13">
+            <img src="jan24.jpg" alt="webinar 13">
+            <img src="jan31.png" alt="webinar 13">
+            <img src="feb2.jpg" alt="webinar 13">
+            <img src="feb8.jpg" alt="webinar 13">
+            <img src="feb15.jpg" alt="webinar 13">
+            <img src="feb21.jpg" alt="webinar 13">
+            <img src="feb22.jpg" alt="webinar 13">
+            <img src="mar8.jpg" alt="webinar 13">
+            <img src="mar17.jpg" alt="webinar 13">
+            <img src="mar29.jpg" alt="webinar 13">
+            <img src="ap 2.jpg" alt="webinar 13">
+            <img src="ap 3.jpg" alt="webinar 13">
+            <img src="ap10.jpg" alt="webinar 13">
+            <img src="ap22.jpg" alt="webinar 13">
+            <img src="ap24.jpg" alt="webinar 13">
+          </div>
+        </div>
+      </section>
